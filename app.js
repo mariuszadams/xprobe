@@ -13,15 +13,15 @@ app.use('/', route);
 
 // A route that says hello
 route.get('/', function(req, res) {
-    res.send('Hello! This is the index page for the app.\n');
     if (healthy) {
-      console.log('ping /healthz => pong [healthy]');
-      res.send('OK\n');
+      console.log('ping / => pong [healthy]');
+      res.send('INDEX OK\n');
+      res.send('Hello! This is the index page for the app.\n');
     }
     else {
-      console.log('ping /healthz => pong [unhealthy]');
+      console.log('ping / => pong [unhealthy]');
       res.status(503);
-      res.send('Error!. App not healthy!\n');
+      res.send('INDEX Error!. App not healthy!\n');
     }
 });
 

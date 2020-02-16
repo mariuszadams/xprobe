@@ -15,8 +15,8 @@ app.use('/', route);
 route.get('/', function(req, res) {
     if (healthy) {
       console.log('ping / => pong [healthy]');
-      res.send('INDEX OK\n');
-      res.send('Hello! This is the index page for the app.\n');
+#      res.send('INDEX OK\n');
+      res.send('Hello! This is the index page for the app.\nAll is Fine!');
     }
     else {
       console.log('ping / => pong [unhealthy]');
